@@ -2,7 +2,6 @@ package gift.domain.model.dto;
 
 import gift.domain.model.entity.Category;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import org.hibernate.validator.constraints.URL;
 
@@ -22,7 +21,8 @@ public class CategoryUpdateRequestDto {
     @Size(max = 255)
     private final String description;
 
-    public CategoryUpdateRequestDto(String name, String color, String imageUrl, String description) {
+    public CategoryUpdateRequestDto(String name, String color, String imageUrl,
+        String description) {
         this.name = name;
         this.color = color;
         this.imageUrl = imageUrl;
